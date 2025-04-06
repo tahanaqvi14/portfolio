@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+body {
+    background: black;
+    font-family: "Geist", sans-serif;
+    /* width: 90vw; */
+}
+
+/* Scrollbar for Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background for the track */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #555; /* Thumb color */
+    border-radius: 10px;
+    border: 2px solid #1e1e1e; /* Border blends with track */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+  }
+  
+  /* Scrollbar for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #1e1e1e;
+  }
+  
+/* App.css */
+
+

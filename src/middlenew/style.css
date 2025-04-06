@@ -1,0 +1,23 @@
+.glow-effect4 {
+    text-shadow: 0 0 10px #4a4aff, 0 0 0px #4a4aff, 0 0    0px #4a4aff;
+}
+.glow-effect3 {
+    text-shadow: 0 0 10px #ff4af0, 0 0 0px #ff4af0, 0 0    0px #ff4af0;
+}
+.glow-effect2 {
+    text-shadow: 0 0 10px #bd4aff, 0 0 0px #bd4aff, 0 0    0px #bd4aff;
+}
+.glow-effect1 {
+    text-shadow: 0 0 10px #4aff62, 0 0 0px #4aff62, 0 0    0px #4aff62;
+}
+
+body{
+    font-family: "Geist", sans-serif; 
+}
+
+.element11{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem; /* Equivalent to space-x-4 */
+}

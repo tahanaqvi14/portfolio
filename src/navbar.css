@@ -1,0 +1,29 @@
+.hover-underline {
+    position: relative;
+    text-decoration: none;
+    color: #d1d5db; /* Default text color */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+  
+  .hover-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjusts the underline position */
+    width: 100%;
+    height: 2px;
+    background-color: #A120F0; /* Teal color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover-underline:hover {
+    color: #A120F0; /* Change text color on hover */
+    text-shadow: 0px 0px 8px #A120F0; /* Glow effect */
+  }
+  
+  .hover-underline:hover::after {
+    transform: scaleX(1);
+  }
+  

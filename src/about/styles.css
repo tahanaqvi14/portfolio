@@ -1,0 +1,86 @@
+body {
+	align-items: center;
+	background: black;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+body{
+	font-family: "Geist", sans-serif;
+}
+
+
+
+.slider {
+	background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70vh;
+  height: 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(to right, 
+  rgba(255, 255, 255, 0) 0%, 
+  rgba(255, 255, 255, 1) 15%, 
+  rgba(255, 255, 255, 1) 85%, 
+  rgba(255, 255, 255, 0) 100%);
+
+-webkit-mask-image: linear-gradient(to right, 
+  rgba(255, 255, 255, 0) 0%, 
+  rgba(255, 255, 255, 1) 15%, 
+  rgba(255, 255, 255, 1) 85%, 
+  rgba(255, 255, 255, 0) 100%);
+
+
+
+
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	/* margin: px; */
+	overflow:hidden;
+	position: relative;
+	width: 960px;
+  align-items: center;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		/* z-index: 2; */
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll 30s linear infinite;
+
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+}

@@ -1,0 +1,86 @@
+.goog {
+	background: #5C5C5C;
+  width: 80vw;
+  height:2px;
+  mask-image: linear-gradient(to right, 
+  rgba(255, 255, 255, 0) 0%, 
+  rgba(255, 255, 255, 1) 15%, 
+  rgba(255, 255, 255, 1) 85%, 
+  rgba(255, 255, 255, 0) 100%);
+
+-webkit-mask-image: linear-gradient(to right, 
+  rgba(255, 255, 255, 0) 0%, 
+  rgba(255, 255, 255, 1) 15%, 
+  rgba(255, 255, 255, 1) 85%, 
+  rgba(255, 255, 255, 0) 100%);
+}
+
+body{
+  font-family: "Geist", sans-serif;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Define styles for the div */
+.box {
+  background-color: #05070C;
+  width: 14rem; /* Equivalent to w-32 in Tailwind (32 * 0.25rem) */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg in Tailwind */
+  text-align: center;
+  border: 1px solid #4B5563; /* Equivalent to border-gray-600 in Tailwind */
+  transition: border 0.3s ease; /* Adding transition for hover effect */
+}
+
+/* Define hover effect */
+.box:hover {
+  border-color: #8B5CF6; /* Equivalent to hover:border-purple-500 in Tailwind */
+}
+
+@media (min-width: 768px) and (max-width: 956px) {
+  .box {
+    width: 11rem; /* 224px (14 × 16px) */
+  }
+}
+
+.element {
+  margin-top: 32px;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;               
+}
+
+@media (max-width: 536px) {
+  .element {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+
+  }
+}
+
+/* Scrollbar for Webkit-based browsers (Chrome, Edge, Safari) */
+
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Dark background for the track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* Thumb color */
+  border-radius: 10px;
+  border: 2px solid #1e1e1e; /* Border blends with track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+/* Scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1e1e1e;
+}
